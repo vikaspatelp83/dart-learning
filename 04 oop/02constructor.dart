@@ -2,7 +2,7 @@ class Student {
   int id;
   String name;
   // in the class we cannot have both default and
-  // parametrised constructors at the same time
+  // parameterised constructors at the same time
 
   // default constructor
   // Student() {
@@ -10,11 +10,11 @@ class Student {
   //   this.name = "";
   //   print("Default constructor");
   // }
-  // parametrrised constructor
+  // parameterised constructor
   // Student(int id, String name) {
   // or
   Student(this.id, this.name) {
-    print("Parametrised constructor ${this.id} ${this.name}");
+    print("Parameterised constructor ${this.id} ${this.name}");
   }
   void study() {
     print("ID = ${this.id}\nNAME = ${this.name}");
