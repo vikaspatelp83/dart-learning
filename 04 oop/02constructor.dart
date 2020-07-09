@@ -26,6 +26,7 @@ class Student {
   }
 
   // named constructor
+  // will simplly set the passed values to the instance variables
   Student.CustomNamedConstructor(this.id, this.name);
 }
 
