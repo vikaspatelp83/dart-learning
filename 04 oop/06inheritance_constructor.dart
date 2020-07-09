@@ -1,23 +1,27 @@
 void main() {
-  var d = Dog("Pug");
+  var d = Dog.namedConstructor2("Pug");
   d.eat();
 }
 
 class Animal {
   String color = "Brown";
-  Animal() {
-    print("Animal Constructor");
-  }
-  // Animal(String color) {
+  // Animal() {
   //   print("Animal Constructor");
   // }
+  Animal(String color) {
+    print("Animal Constructor");
+  }
+
+  Animal.namedAnimalConstructor() {
+    print("named Animal Constructor");
+  }
 
   void eat() => print("Animal is Eating");
 }
 
 class Dog extends Animal {
   String breed;
-  String color = "Blask"; // overridden;
+  String color = "Black"; // overridden;
   // Dog() {
   //   print("Dog Constructor");
   // }
@@ -27,8 +31,17 @@ class Dog extends Animal {
   //   print("Dog Constructor");
   // }
 
-  Dog(String breed) {
-    print("Dog Constructor");
+  // Dog(String breed) {
+  //   print("Dog Constructor");
+  // }
+
+  Dog.namedConstructor(String breed, String color) : super(color) {
+    print("Named Constructor");
+  }
+
+// call parent named constructor
+  Dog.namedConstructor2(String breed) : super.namedAnimalConstructor() {
+    print("Named Constructor");
   }
 
   void bark() => print("Barking");
@@ -38,3 +51,15 @@ class Dog extends Animal {
     print("Dog is Eating");
   }
 }
+
+
+
+/* NOTES
+-> By default a constructor in a subclass calls the 
+   superclass' no-argument constructor.
+-> Parent class constructor is always called before 
+   child class constructor.
+-> If default constructor is missing in Parent class,
+   then you must manually call one of the constructors
+   in super class.
+*/
