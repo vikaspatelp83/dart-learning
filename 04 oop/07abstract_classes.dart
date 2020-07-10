@@ -32,4 +32,3 @@ Abstract Class:
 
 */
 
-// done till 33rd lecture
