@@ -7,6 +7,7 @@ class Person {
 }
 
 class Boy {
+  // return value and pass parameters
   String call(String name) {
     return "Hey, " + name;
   }
