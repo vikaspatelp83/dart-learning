@@ -18,7 +18,7 @@ void main() {
       print("Hello, Andy");
       break;
     case "Dave":
-      print("HEllo, Dave");
+      print("Hello, Dave");
       break;
     default:
       print("No name");

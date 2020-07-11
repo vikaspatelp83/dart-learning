@@ -270,10 +270,13 @@ class Circle {
 **Only static fields can be declared as `const`.
 Try declaring the field as `final`, or adding the keyword `static`.**
 
-# 2 Control Statements <a name="control"></a>
-These statements are use to control the execution flow of the program and add various logics to the program.
+---
+--- 
 
-## 1.1 If - Else Statements <a name="ifelse"></a>
+# 2 Control Statements <a name="control"></a>
+These statements are use to control the execution flow of the program and add various logics to the program. 
+
+## 2.1 If - Else Statements <a name="ifelse"></a>
 Simple condition checking.  
 **Syntax** 
 ##### [x] IF alone
@@ -340,7 +343,9 @@ void main() {
 ```
 Check code inside `01 basics/05if_else.dart`.
 
-## 1.6 Conditional Expression <a name="cond_expr"></a>
+--- 
+
+## 2.2 Conditional Expression <a name="cond_expr"></a>
 Conditional expression is a simple alternative to `if-else`.  
 There are two conditional expressions   
 1. **`condition ? expr1 : expr2;`**  
@@ -360,5 +365,61 @@ There are two conditional expressions
     print(z);
     ```
 
+--- 
+
 ## 2.3 Switch Case <a name="switch"></a>
 
+If we have constant conditions like ids as `1, 2, 3, 4, 5`  
+Instead using many `if-else` statements we can use `switch-case` statement.
+
+The case can be a constant `int` or a constant `String`.
+##### Syntax 
+```dart
+switch(variable){
+    case 1: 
+    // code
+    break; // this is must 
+    
+    case 2: 
+    // another code
+    break; 
+    
+    default: 
+    // will execute if no case matches
+}
+```
+
+`break` is must to stop execution after every `case`. 
+
+### Demo 
+With integer cases. 
+```dart
+// Integer (int)
+var option = 2;
+switch (option) {
+case 1:
+    print("Option 1");
+    break;
+case 2:
+    print("Option 2");
+    break;
+default:
+    print("Invalid option");
+}
+```
+With String cases.
+```dart
+String name = "Andy";
+switch (name) {
+case "Andy":
+    print("Hello, Andy");
+    break;
+case "Dave":
+    print("Hello, Dave");
+    break;
+default:
+    print("No name");
+}
+```
+---
+--- 
