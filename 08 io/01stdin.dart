@@ -18,9 +18,11 @@ void main() {
   print("Married?(true/false) ");
   bool md = bool.fromEnvironment(stdin.readLineSync());
 
-  print("Name: $name\nAge : $age\nPercentage : $perc\nMarried : $md");
+  // another way of parsing boolean
+  print("Do You Have Kids?(true/false) ");
+  bool kids = (stdin.readLineSync().toLowerCase() == 'true') ? true : false;
 
-  if (md) {
-    print(!md);
-  }
+  print(
+      "Name: $name\nAge : $age\nPercentage : $perc\nMarried : $md\nHave Kids : $kids");
+
 }

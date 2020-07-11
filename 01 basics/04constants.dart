@@ -5,7 +5,7 @@
 final vs const:
   * final variable  can only be set once and 
   it is initialized when accessed
-  * const is internally in nature but it is a 
+  * const is internally final in nature but it is a 
   compile-time constant 
     -> i.e. it is initialized during compilation
 
