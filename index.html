@@ -1,389 +1,59 @@
-<h1 id="dart-notes-by-vikas-patel">Dart Notes by Vikas Patel</h1>
-<p>Here are the Hands-on notes for Dart Programming Language.<br>I created these notes while I was learning Dart Language.<br>You can use these notes as a quick reference to Syntax and Demo.<br>I&#39;ve covered almost every fundamental concept of Dart in these notes.  </p>
-<p><a href="https://www.villageprogrammer.blogspot.com/">Take a look at my blog</a> </p>
-<hr>
-<h2 id="table-of-contents-">Table of contents:</h2>
-<ol>
-<li><a href="#basics">Basics</a>:  <ol>
-<li><a href="#main">The Main Function</a></li>
-<li><a href="#datatypes">Data Types</a></li>
-<li><a href="#string_interp">String Interpolation</a></li>
-<li><a href="#final_const">Constant and Final Variables</a></li>
-</ol>
-</li>
-<li><a href="#control">Control Statements</a><ol>
-<li><a href="#ifelse">If - Else Statements</a></li>
-<li><a href="#cond_expr">Conditional Expression</a></li>
-<li><a href="#switch">Switch Case</a></li>
-</ol>
-</li>
-<li><a href="#loop">Looping</a><ol>
-<li><a href="#for">For Loop</a></li>
-<li><a href="#while">While Loop</a></li>
-<li><a href="#do_while">Do ... While Loop</a></li>
-<li><a href="#break_continue">Break and Continue</a></li>
-<li><a href="#label">Lable</a></li>
-</ol>
-</li>
-<li><a href="#functions">Functions</a><ol>
-<li><a href="#func_syntax">Syntax</a></li>
-<li><a href="#func_types">Types of Functions</a></li>
-<li><a href="#fat_arrow">Function Expression (The Fat Arrow)</a></li>
-<li><a href="#func_parameters">Types of Function Parameters</a></li>
-</ol>
-</li>
-<li><a href="#exception_handling">Exception Handling</a><ol>
-<li><a href="#handle_exxception">Handle Exception</a><ol>
-<li><a href="#try">try</a></li>
-<li><a href="#catch">catch</a></li>
-<li><a href="#on">on</a></li>
-<li><a href="#finally">finally</a></li>
-</ol>
-</li>
-<li><a href="#stack_trace">Stack Trace</a></li>
-<li><a href="#custom_exceptions">Custom Exceptions (Create an Exception Class)</a></li>
-</ol>
-</li>
-<li><a href="#oop">Object Oriented Programming</a><ol>
-<li><a href="#class">Class</a></li>
-<li><a href="#constructor">Constructor</a></li>
-<li><a href="#get_set">Getter Setter</a></li>
-<li><a href="#inheritance">Inheritance</a></li>
-<li><a href="#overriding">Method Overriding</a></li>
-<li><a href="#inheritance_constructor">Inheritance Constructor</a></li>
-<li><a href="#abstract_class">Abstract Class</a></li>
-<li><a href="#interface">Interface</a></li>
-<li><a href="#static">Static Members</a></li>
-</ol>
-</li>
-<li><a href="#functional_prog">Functional Programming</a><ol>
-<li><a href="#lambda">Lambda</a></li>
-<li><a href="#hofunc">Higher Order Functions</a></li>
-<li><a href="#closure">Closure</a></li>
-</ol>
-</li>
-<li><a href="#collections">Collections</a><ol>
-<li><a href="#list">List</a></li>
-<li><a href="#set">Set</a></li>
-<li><a href="#map">Map</a></li>
-</ol>
-</li>
-<li><a href="#io">Standard Input/Output</a><ol>
-<li><a href="#input">Read user input</a></li>
-<li><a href="#output">Write to console</a></li>
-</ol>
-</li>
-</ol>
-<hr>
-<h1 id="1-basics">1. Basics</h1>
-<h2 id="1-1-the-main-function-a-name-main-a-">1.1 The Main Function <a name="main"> </a></h2>
-<p>Every Dart program starts execution from <code>main()</code> functions.  </p>
-<h3 id="the-syntax-of-main-function">The syntax of main function</h3>
-<p><em>We use this version when we want to use commant line arguments.</em></p>
-<pre><code class="lang-dart"><span class="hljs-keyword">void</span> main(<span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">String</span>&gt; args){  
-    <span class="hljs-comment">// do your stuff here </span>
-}
-</code></pre>
-<p>Or simple version<br><em>Generally we use this version of main.</em></p>
-<pre><code class="lang-dart"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
-    <span class="hljs-comment">// do your stuff here</span>
-}
-</code></pre>
-<h3 id="demo">Demo</h3>
-<pre><code class="lang-dart"><span class="hljs-keyword">void</span> main() {
-  <span class="hljs-comment">// say hello world</span>
-  <span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello World!"</span>);
-  <span class="hljs-comment">// print some numbers, integer expression</span>
-  <span class="hljs-built_in">print</span>(<span class="hljs-number">1</span> * <span class="hljs-number">2</span> + <span class="hljs-number">34</span> - <span class="hljs-number">12</span> / <span class="hljs-number">5</span>);
-  <span class="hljs-comment">// print double</span>
-  <span class="hljs-built_in">print</span>(<span class="hljs-number">2.53</span>);
-  <span class="hljs-comment">// boolean</span>
-  <span class="hljs-built_in">print</span>(<span class="hljs-keyword">true</span>);
-}
-</code></pre>
-<hr>
-<h2 id="1-2-data-types-a-name-datatypes-a-">1.2 Data Types <a name="datatypes"></a></h2>
-<p>Literals in Dart.  </p>
-<pre><code class="lang-dart"><span class="hljs-comment">// literals in Dart</span>
-<span class="hljs-string">"Dan"</span>; <span class="hljs-comment">// String literal  </span>
-<span class="hljs-number">23</span>; <span class="hljs-comment">// int literal  </span>
-<span class="hljs-number">45.6</span>; <span class="hljs-comment">// double literal  </span>
-true; <span class="hljs-comment">// bool literal</span>
-</code></pre>
-<p>There are 4 built-in data types in Dart.  </p>
-<table>
-<thead>
-<tr>
-<th>SN</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.</td>
-<td>int</td>
-<td>Integer value</td>
-</tr>
-<tr>
-<td>2.</td>
-<td>double</td>
-<td>Floating point value</td>
-</tr>
-<tr>
-<td>3.</td>
-<td>String</td>
-<td>String value</td>
-</tr>
-<tr>
-<td>4.</td>
-<td>bool</td>
-<td><code>true</code> , <code>false</code>  value</td>
-</tr>
-</tbody>
-</table>
-<h3 id="syntax-creating-variables-in-dart">Syntax creating variables in Dart</h3>
-<p><strong>Use explicit way to declare the variable.</strong>  </p>
-<p><code>typename variable_name;</code>  </p>
-<p>Or initialize while creating.<br><code>typename variable_name = initial_value;</code>  </p>
-<pre><code class="lang-dart"><span class="hljs-built_in">int</span> intVariable;
-<span class="hljs-built_in">int</span> anotherIntVariable = <span class="hljs-number">111</span>;
-<span class="hljs-built_in">String</span> name = <span class="hljs-string">"Vikas"</span>;
-<span class="hljs-built_in">double</span> pi = <span class="hljs-number">3.14</span>;
-<span class="hljs-built_in">bool</span> isdeveloper = <span class="hljs-keyword">true</span>;
-</code></pre>
-<p><strong>Use implicit way to declare the variable.</strong>  </p>
-<p>Use <code>var</code> to create any type of variable.<br><code>var variable_name;</code>  </p>
-<p>Or initialize while creating.<br><code>var variable_name = intial_value</code>;`</p>
-<h3 id="demo">Demo</h3>
-<p><strong>Note:  <em>In Dart all the data types are  objects and their initial value is <code>null</code>.</em></strong></p>
-<p>Create the variables</p>
-<pre><code class="lang-dart">  <span class="hljs-comment">// numbers: int</span>
-  <span class="hljs-built_in">int</span> score = <span class="hljs-number">90</span>;
-  <span class="hljs-comment">// store hexadecimal value</span>
-  <span class="hljs-built_in">int</span> hexValue = <span class="hljs-number">0xEAEAEA</span>;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-  <span class="hljs-comment">// numbers: double</span>
-  <span class="hljs-built_in">double</span> length = <span class="hljs-number">24.6</span>;
-  <span class="hljs-built_in">double</span> exponentValue = <span class="hljs-number">1.4e5</span>;
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-  <span class="hljs-comment">// String</span>
-  <span class="hljs-built_in">String</span> name = <span class="hljs-string">"Dave"</span>;
+    <title>Dart-learning by vikaspatelp83</title>
+  </head>
 
-  <span class="hljs-comment">// boolean</span>
-  <span class="hljs-built_in">bool</span> going = <span class="hljs-keyword">false</span>;
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Dart-learning</h1>
+        <h2>Learning Dart Programming language for cross platform application development using Flutter.</h2>
+        <a href="https://github.com/vikaspatelp83/dart-learning" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-  <span class="hljs-comment">// use var</span>
-  <span class="hljs-keyword">var</span> name2 = <span class="hljs-string">"Vikas"</span>; <span class="hljs-comment">// String</span>
-  <span class="hljs-keyword">var</span> age = <span class="hljs-number">20</span>;        <span class="hljs-comment">// int</span>
-  <span class="hljs-keyword">var</span> score2 = <span class="hljs-number">45.6</span>;   <span class="hljs-comment">// double</span>
-  <span class="hljs-keyword">var</span> isHere = <span class="hljs-keyword">true</span>;   <span class="hljs-comment">// bool</span>
-  <span class="hljs-keyword">var</span> exp = <span class="hljs-number">2.5e6</span>;     <span class="hljs-comment">// exponential (double)</span>
-  <span class="hljs-keyword">var</span> hex2 = <span class="hljs-number">0xEC43AB</span>; <span class="hljs-comment">// hex (int)</span>
-  <span class="hljs-keyword">var</span> data;            <span class="hljs-comment">// will have null</span>
-</code></pre>
-<p>Print the values  </p>
-<pre><code class="lang-dart"><span class="hljs-keyword">print</span>(score);        <span class="hljs-comment">//int          </span>
-<span class="hljs-keyword">print</span>(hexValue);     <span class="hljs-comment">//int</span>
-<span class="hljs-keyword">print</span>(length);       <span class="hljs-comment">//double</span>
-<span class="hljs-keyword">print</span>(exponentValue);<span class="hljs-comment">//double</span>
-<span class="hljs-keyword">print</span>(going);        <span class="hljs-comment">//bool</span>
-<span class="hljs-keyword">print</span>(name);         <span class="hljs-comment">//String</span>
-<span class="hljs-keyword">print</span>(name2);        <span class="hljs-comment">//String           </span>
-<span class="hljs-keyword">print</span>(age);          <span class="hljs-comment">//int</span>
-<span class="hljs-keyword">print</span>(score2);       <span class="hljs-comment">//int</span>
-<span class="hljs-keyword">print</span>(isHere);       <span class="hljs-comment">//bool</span>
-<span class="hljs-keyword">print</span>(<span class="hljs-built_in">exp</span>);          <span class="hljs-comment">//double</span>
-<span class="hljs-keyword">print</span>(hex2);         <span class="hljs-comment">//int</span>
-<span class="hljs-keyword">print</span>(data);         <span class="hljs-comment">//null value</span>
-</code></pre>
-<p>Check the code in <code>01 basics/02data_types.dart</code></p>
-<hr>
-<h2 id="1-3-string-and-string-interpolation">1.3 String and String Interpolation</h2>
-<p>Ways to define a String variable  </p>
-<pre><code class="lang-dart"> // ways <span class="hljs-keyword">to</span> define <span class="hljs-built_in">string</span>
-  <span class="hljs-built_in">String</span> s1 = <span class="hljs-symbol">'Vikas</span>'; // <span class="hljs-keyword">with</span> single quote
-  <span class="hljs-built_in">String</span> s2 = <span class="hljs-string">"Dave"</span>; // <span class="hljs-keyword">with</span> double quote
-  <span class="hljs-built_in">String</span> s3 = <span class="hljs-string">"It's Easy"</span>; // can <span class="hljs-keyword">use</span> both
-  <span class="hljs-built_in">String</span> s4 = <span class="hljs-symbol">'It\'</span>s Easy'; // excape <span class="hljs-keyword">sequence</span>
-  <span class="hljs-built_in">String</span> s5 = <span class="hljs-symbol">'This</span> <span class="hljs-keyword">is</span> a very very long <span class="hljs-built_in">string</span> '
-      <span class="hljs-symbol">'and</span> exceeding the <span class="hljs-literal">line</span>.'; // long <span class="hljs-built_in">string</span>
-  // auto concatenation <span class="hljs-keyword">of</span> strings
-</code></pre>
-<p>String Interpolation </p>
-<pre><code class="lang-dart"><span class="hljs-comment">// Normal Concatenation</span>
-<span class="hljs-built_in">String</span> name = <span class="hljs-string">"Vikas"</span>;
-<span class="hljs-built_in">String</span> msg = name + <span class="hljs-string">", We are heading to the west"</span>;
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="learn-dart-with-vikas-patel" class="anchor" href="#learn-dart-with-vikas-patel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Learn Dart with Vikas Patel</h1>
+<p>Check the NOTES for the course
+<strong><a href="docs/DART_NOTES.md">Click Here</a></strong></p>
+<p>Check <strong><a href="docs/DART_NOTES.md#/#basics">Table of Content</a></strong></p>
+<p>Check the code files from above folders.</p>
+<p><img src="docs/dartlogo.png" alt="Dart Logo"></p>
+        </section>
 
-<span class="hljs-comment">// Interpolation</span>
-<span class="hljs-built_in">String</span> msg2 = <span class="hljs-string">"$name We are heading to the west"</span>;
-<span class="hljs-built_in">String</span> msglen = <span class="hljs-string">"Length of msg = <span class="hljs-subst">${msg2.length}</span>"</span>;
+        <aside id="sidebar">
+          <a href="https://github.com/vikaspatelp83/dart-learning/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/vikaspatelp83/dart-learning/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-<span class="hljs-comment">// Print</span>
-<span class="hljs-built_in">print</span>(msg2);
-<span class="hljs-built_in">print</span>(msglen);
-</code></pre>
-<p>We can interpolate any data type with String in <code>print(...)</code> using <code>$varname</code>.</p>
-<pre><code class="lang-dart">int <span class="hljs-keyword">BoxLength </span>= <span class="hljs-number">123</span><span class="hljs-comment">;</span>
-double <span class="hljs-keyword">BoxWeight </span>= <span class="hljs-number">4522</span>.<span class="hljs-number">4545</span><span class="hljs-comment">;</span>
-print(<span class="hljs-string">"Length of box = $BoxLength \nWeight of Box = $BoxWeight"</span>)<span class="hljs-comment">;</span>
-</code></pre>
-<hr>
-<h2 id="1-4-constant-and-final-variables-a-name-final_const-a-">1.4 Constant and Final Variables <a name="final_const"></a></h2>
-<p>In dart we can create constants using 
-  -&gt; final
-  -&gt; const </p>
-<ol>
-<li><strong>final vs const:</strong></li>
-<li><code>final</code> variable  can only be set once and it is initialized when accessed</li>
-<li><p><code>const</code> is internally final in nature but it is a <code>compile-time constant</code><br>  -&gt; i.e. it is initialized during compilation</p>
-</li>
-<li><p>Instance variable can be final but cannot be constant</p>
-</li>
-<li>If you want a Constant class level then make it 
-<code>static const</code> .</li>
-</ol>
-<h3 id="demo">Demo</h3>
-<pre><code class="lang-dart"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-comment">// final</span>
-  <span class="hljs-keyword">final</span> city = <span class="hljs-string">"Toronto"</span>;
-  <span class="hljs-comment">// or</span>
-  <span class="hljs-comment">// final String city = "Toronto";</span>
-  <span class="hljs-comment">// city = "NY"; // Error: Can't assign to the final variable 'city'.</span>
+          <p class="repo-owner"><a href="https://github.com/vikaspatelp83/dart-learning"></a> is maintained by <a href="https://github.com/vikaspatelp83">vikaspatelp83</a>.</p>
 
-  <span class="hljs-keyword">const</span> PI = <span class="hljs-number">3.1415</span>;
-  <span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> gravity = <span class="hljs-number">9.8</span>;
-}
-</code></pre>
-<p>Class level constant</p>
-<pre><code class="lang-dart"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
-  <span class="hljs-keyword">final</span> color = <span class="hljs-string">"RED"</span>; <span class="hljs-comment">// OK</span>
-  <span class="hljs-comment">// const PI = 3.1415; // Not OK</span>
-  <span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> PI = <span class="hljs-number">3.1415</span>; <span class="hljs-comment">// OK</span>
-}
-</code></pre>
-<p><strong>Only static fields can be declared as <code>const</code>.
-Try declaring the field as <code>final</code>, or adding the keyword <code>static</code>.</strong></p>
-<h2 id="-">---</h2>
-<h1 id="2-control-statements-a-name-control-a-">2 Control Statements <a name="control"></a></h1>
-<p>These statements are use to control the execution flow of the program and add various logics to the program. </p>
-<h2 id="2-1-if-else-statements-a-name-ifelse-a-">2.1 If - Else Statements <a name="ifelse"></a></h2>
-<p>Simple condition checking.<br><strong>Syntax</strong> </p>
-<h5 id="-x-if-alone">[x] IF alone</h5>
-<pre><code class="lang-dart">if(condition){
-    // block 1
-    //<span class="hljs-built_in"> execute </span>the code
-}
-</code></pre>
-<p>When the condition is  <code>true</code> the code inside <code>block 1</code> gets executed.
-Otherwise nothing happens to the code inside   <code>block 1</code>.</p>
-<h5 id="-x-if-and-else-together">[x] IF and ELSE together</h5>
-<pre><code class="lang-dart">if(condition){
-    // block 1
-    //<span class="hljs-built_in"> execute </span>the code
-} else{
-    // block 2
-    //<span class="hljs-built_in"> execute </span>the code 
-}
-</code></pre>
-<h5 id="-x-if-else-ladder">[x] IF-ELSE ladder</h5>
-<pre><code class="lang-dart">if(condition){
-    // block 1
-    //<span class="hljs-built_in"> execute </span>the code
-} else if(condition2){
-    // block 2
-    //<span class="hljs-built_in"> execute </span>the code 
-} else if(condition3){
-    // block 3
-    //<span class="hljs-built_in"> execute </span>the code  
-}
-<span class="hljs-keyword">.</span>
-<span class="hljs-keyword">.</span>
-<span class="hljs-keyword">.</span>
-else if(condition n){
-    // block n
-    //<span class="hljs-built_in"> execute </span>the code 
-} else{
-    // block last
-    //<span class="hljs-built_in"> execute </span>the code 
-}
-</code></pre>
-<p>When the condition is  <code>true</code> the code inside the respective  <code>block</code> gets executed. Otherwise <code>block last</code> is executed.     </p>
-<h3 id="demo">Demo</h3>
-<pre><code class="lang-dart"><span class="hljs-keyword">void</span> main() {
-  <span class="hljs-keyword">var</span> salary = <span class="hljs-number">250000</span>;
-  <span class="hljs-keyword">if</span> (salary &gt; <span class="hljs-number">200000</span>) {
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"You, can get the Credit Card"</span>);
-  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (salary &gt; <span class="hljs-number">150000</span>) {
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"You can apply for the Credit Card"</span>);
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"You cannot get the Credit Card"</span>);
-  }
-}
-</code></pre>
-<p>Check code inside <code>01 basics/05if_else.dart</code>.</p>
-<hr>
-<h2 id="2-2-conditional-expression-a-name-cond_expr-a-">2.2 Conditional Expression <a name="cond_expr"></a></h2>
-<p>Conditional expression is a simple alternative to <code>if-else</code>.<br>There are two conditional expressions   </p>
-<ol>
-<li><strong><code>condition ? expr1 : expr2;</code></strong><br> returns <code>expr1</code> if condition is true else returns <code>expr2</code><pre><code class="lang-dart"> <span class="hljs-keyword">int</span> a = <span class="hljs-number">12</span>, b = <span class="hljs-number">45</span>;
- <span class="hljs-keyword">print</span>(<span class="hljs-string">"Small Number = <span class="hljs-subst">${(a &lt; b) ? a : b}</span>"</span>);
- <span class="hljs-keyword">int</span> c = (a &lt; b) ? a : b;
- <span class="hljs-keyword">print</span>(<span class="hljs-string">"Small Number = $c);</span>
-</code></pre>
-</li>
-<li><strong><code>expr1 ?? expr2</code></strong><br> if <code>expr1</code> is not-null, returns its value; otherwise, evalutes and returns the value of <code>expr2</code><pre><code class="lang-dart"> <span class="hljs-built_in">int</span> x, y = <span class="hljs-number">345</span>; <span class="hljs-comment">// x = null;</span>
- <span class="hljs-built_in">print</span>(<span class="hljs-string">"Value = <span class="hljs-subst">${x ?? y}</span>"</span>);
- <span class="hljs-built_in">int</span> z = x ?? y;
- <span class="hljs-built_in">print</span>(z);
-</code></pre>
-</li>
-</ol>
-<hr>
-<h2 id="2-3-switch-case-a-name-switch-a-">2.3 Switch Case <a name="switch"></a></h2>
-<p>If we have constant conditions like ids as <code>1, 2, 3, 4, 5</code><br>Instead using many <code>if-else</code> statements we can use <code>switch-case</code> statement.</p>
-<p>The case can be a constant <code>int</code> or a constant <code>String</code>.</p>
-<h5 id="syntax">Syntax</h5>
-<pre><code class="lang-dart"><span class="hljs-keyword">switch</span>(<span class="hljs-keyword">variable</span>){
-    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>: 
-    <span class="hljs-comment">// code</span>
-    <span class="hljs-keyword">break</span>; <span class="hljs-comment">// this is must </span>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
-    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>: 
-    <span class="hljs-comment">// another code</span>
-    <span class="hljs-keyword">break</span>; 
-
-    <span class="hljs-keyword">default</span>: 
-    <span class="hljs-comment">// will execute if no case matches</span>
-}
-</code></pre>
-<p><code>break</code> is must to stop execution after every <code>case</code>. </p>
-<h3 id="demo">Demo</h3>
-<p>With integer cases. </p>
-<pre><code class="lang-dart"><span class="hljs-comment">// Integer (int)</span>
-<span class="hljs-keyword">var</span> option = <span class="hljs-number">2</span>;
-<span class="hljs-keyword">switch</span> (option) {
-<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Option 1"</span>);
-    <span class="hljs-keyword">break</span>;
-<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Option 2"</span>);
-    <span class="hljs-keyword">break</span>;
-<span class="hljs-keyword">default</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Invalid option"</span>);
-}
-</code></pre>
-<p>With String cases.</p>
-<pre><code class="lang-dart"><span class="hljs-keyword">String</span> name = <span class="hljs-string">"Andy"</span>;
-<span class="hljs-built_in">switch</span> (name) {
-<span class="hljs-built_in">case</span> <span class="hljs-string">"Andy"</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello, Andy"</span>);
-    <span class="hljs-built_in">break</span>;
-<span class="hljs-built_in">case</span> <span class="hljs-string">"Dave"</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello, Dave"</span>);
-    <span class="hljs-built_in">break</span>;
-<span class="hljs-built_in">default</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"No name"</span>);
-}
-</code></pre>
-<h2 id="-">---</h2>
+  
+  </body>
+</html>
