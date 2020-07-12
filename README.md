@@ -3,9 +3,9 @@
 
 
 Check the NOTES for the course 
-**[Click Here](docs/DART_NOTES.html)**
+**[Click Here](docs/DART_NOTES.md)**
 
-Check **[Table of Content](docs/DART_NOTES.html#/#basics)**
+Check **[Table of Content](docs/DART_NOTES.md#/#basics)**
 
 
 Check the code files from above folders.
