@@ -43,6 +43,10 @@ I've covered almost every fundamental concept of Dart in these notes.
   - [3.2 While Loop](#32-while-loop)
     - [Syntax](#syntax-3)
     - [Demo](#demo-7)
+  - [3.3 Do ...While Loop](#33-do-while-loop)
+    - [Syntax](#syntax-4)
+    - [Demo](#demo-8)
+    - [While vs Do...While](#while-vs-dowhile)
 
 
 
@@ -501,5 +505,34 @@ while (k < 10) {
     k++;
 }
 ```
+
+---
+
+
+## 3.3 Do ...While Loop
+Do ...while Loop is an `exit controlled` loop.  
+Here the `Statement` will run for the first time regardless the `condition` is `true` or `false`.  
+Then it will check the `condition` if it is `true` the the loop will continue execution otherwise it will jump out of the loop.  
+
+### Syntax
+`do{...} while(conditon);`
+Here the semicolon(`;`) is must.
+
+### Demo 
+```dart
+// print 0...9
+// do ..while loop
+int x = 0;
+do {
+    print(x);
+    x++;
+} while (x < 10);
+
+```  
+
+### While vs Do...While 
+Both work in similar manner.   
+But, `do...while` will execute at least once and `while` won't. 
+
 
 ---
