@@ -1,3 +1,6 @@
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
 # Dart Notes by Vikas Patel
 Here are the Hands-on notes for Dart Programming Language.   
 I created these notes while I was learning Dart Language.  
