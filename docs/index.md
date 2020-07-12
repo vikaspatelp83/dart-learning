@@ -52,6 +52,7 @@ I've covered almost every fundamental concept of Dart in these notes.
       - [Demo](#demo-9)
     - [Continue](#continue)
       - [Demo](#demo-10)
+  - [3.5 Label](#35-label)
 
 
 
@@ -585,3 +586,52 @@ for (var i = 0; i < 10; i++) {
 }
 ```
 ---
+
+## 3.5 Label
+Label is a new concept in Dart (we have seen it in `C` language with its buddy `goto`).   
+This is not a magical spell from _Hogwarts_ that will do amazing magical things.  
+It is just a way to make loop more controlled than before.  
+We can name a block of code using label.  
+Take a look at below code snippet.  
+```dart
+print("i j");
+
+outerLoop:
+for (int i = 0; i < 5; i++) {
+  // ignore: unused_label
+  innerloop:
+  for (int j = 0; j < 5; j++) {
+    print("$i $j");
+    if (i == 2 && j == 2) {
+      break outerLoop; // will break outerloop
+    }
+  }
+}
+```
+Try doing this and observe the result of `i j`.
+
+```dart
+print("i j");
+
+outerLoop:
+for (int i = 0; i < 5; i++) {
+  // ignore: unused_label
+  innerloop:
+  for (int j = 0; j < 5; j++) {
+    print("$i $j");
+    if (i == 2 && j == 2) {
+      break innerLoop; // will break innerloop
+    }
+  }
+}
+```
+---
+
+
+
+
+
+
+
+
+
