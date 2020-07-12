@@ -1,11 +1,10 @@
 # Learn Dart with Vikas Patel 
 
+## **[NOTES for the course ](docs/index.md)**
+
+### [Take a look at my blog](https://www.villageprogrammer.blogspot.com/) 
 
 
-Check the NOTES for the course 
-**[Click Here](docs/index.md)**
-
-Check **[Table of Content](docs/index.md#dart-notes-by-vikas-patel)**
 
 
 Check the code files from above folders.
