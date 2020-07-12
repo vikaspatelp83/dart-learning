@@ -3,9 +3,9 @@
 
 
 Check the NOTES for the course 
-**[Click Here](docs/DART_NOTES.md)**
+**[Click Here](docs/index.md)**
 
-Check **[Table of Content](docs/DART_NOTES.md#/#basics)**
+Check **[Table of Content](docs/index.md#dart-notes-by-vikas-patel)**
 
 
 Check the code files from above folders.
