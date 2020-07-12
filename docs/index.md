@@ -1,4 +1,4 @@
-c# Dart Notes by Vikas Patel
+# Dart Notes by Vikas Patel
 Here are the Hands-on notes for Dart Programming Language.   
 I created these notes while I was learning Dart Language.  
 You can use these notes as a quick reference to Syntax and Demo.  
@@ -8,6 +8,7 @@ I've covered almost every fundamental concept of Dart in these notes.
 
 
 
+- [Dart Notes by Vikas Patel](#dart-notes-by-vikas-patel)
 - [1. Basics](#1-basics)
   - [1.1 The Main Function](#11-the-main-function)
     - [The syntax of main function](#the-syntax-of-main-function)
