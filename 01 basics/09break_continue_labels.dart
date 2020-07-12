@@ -7,7 +7,7 @@ void main() {
     }
     print(i);
   }
-  // break -> stop executionof loop
+  // break -> stop execution of loop
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 5; j++) {
       print("$i $j");

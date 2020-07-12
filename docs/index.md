@@ -32,6 +32,14 @@ I've covered almost every fundamental concept of Dart in these notes.
   - [2.3 Switch Case](#23-switch-case)
       - [Syntax](#syntax)
     - [Demo](#demo-4)
+- [3. Looping](#3-looping)
+  - [3.1 For loop](#31-for-loop)
+    - [Syntax](#syntax-1)
+    - [Demo](#demo-5)
+    - [3.1.1 For ... in Loop](#311-for--in-loop)
+      - [Syntax](#syntax-2)
+      - [Demo](#demo-6)
+    - [3.1.2 Variation in for](#312-variation-in-for)
 
 
 
@@ -396,19 +404,77 @@ default:
 ```
 ---
 
+# 3. Looping
+We can repeat the statements using looping.  
+There are 3 loops in Dart :  
+* For 
+* While 
+* Do ...While
 
 
+## 3.1 For loop
+1. The loop first initializes the `iteration_var` 
+2. then checks `breaking_condition` 
+3. then executes the `Statements` and 
+4. increments or decrements the `iteration_var` and
+5. 2,3,4, are repeated until `breaking_condition` remains `true`. 
+   
+### Syntax
 
+```dart
+for(iteration_var; breaking_condition;  increment/decrement)  
+{
+    // Statements
+}
+```
 
+### Demo
+```dart
+// print even nums
+for (var i = 1; i <= 10; i++) {
+    if (i % 2 == 0){
+        print(i);
+    }
+}
+```
 
+### 3.1.1 For ... in Loop 
+#### Syntax 
+`for(var varname in IterableList){....}`
+#### Demo
+```dart
+// for ..in loop
+List names = ["Dave", "Andy", "Vikas", "Mark"];
+for (var name in names) {
+    print(name);    
+}
 
+```
+This loop is very useful when using List and other data containers.
 
+### 3.1.2 Variation in for
+we can omit the `initial`, `breaking` and `incr/decr` statements.  
+```dart 
+for (; x < 20; x++) {
+    print(x);
+}
 
+for(;;x++){
+    print(x);
+    if(x==10){
+        break;
+    }
+}
 
+for(var x = 0;;){
+    x++;
+    print(x);
+    if(x==10){
+        break;
+    }
+}
 
+```
 
-
-
-
-
+---
 
