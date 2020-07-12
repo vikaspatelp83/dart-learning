@@ -53,6 +53,8 @@ I've covered almost every fundamental concept of Dart in these notes.
     - [Continue](#continue)
       - [Demo](#demo-10)
   - [3.5 Label](#35-label)
+    - [Demo 1](#demo-1)
+    - [Demo 2](#demo-2)
 
 
 
@@ -593,6 +595,8 @@ This is not a magical spell from _Hogwarts_ that will do amazing magical things.
 It is just a way to make loop more controlled than before.  
 We can name a block of code using label.  
 Take a look at below code snippet.  
+
+### Demo 1  
 ```dart
 print("i j");
 
@@ -609,6 +613,8 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 Try doing this and observe the result of `i j`.
+
+### Demo 2  
 
 ```dart
 print("i j");
