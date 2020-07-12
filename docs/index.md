@@ -47,6 +47,11 @@ I've covered almost every fundamental concept of Dart in these notes.
     - [Syntax](#syntax-4)
     - [Demo](#demo-8)
     - [While vs Do...While](#while-vs-dowhile)
+  - [3.4 Break and Continue](#34-break-and-continue)
+    - [Break](#break)
+      - [Demo](#demo-9)
+    - [Continue](#continue)
+      - [Demo](#demo-10)
 
 
 
@@ -535,4 +540,48 @@ Both work in similar manner.
 But, `do...while` will execute at least once and `while` won't. 
 
 
+---
+
+## 3.4 Break and Continue
+These are two loop control statements.   
+Which are used to _forcefully control_ the flow of loop executin.
+### Break 
+`break` is used to stop the execution, and jump out of the loop.
+#### Demo
+
+```dart
+// break after printing 5
+for(int i = 0; i < 10; i++){
+    print(i);
+    if(i==5){
+        break;
+    }
+}
+
+// run and observe
+// break -> stop execution of loop
+for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 5; j++) {
+        print("$i $j");
+        if (i == 2 && j == 2) {
+            break; // will break inner loop
+        }
+    }
+}
+```
+**We have already used `break` in `switch...case` program above.**
+
+### Continue
+`continue` is used to skip current iteration.  
+#### Demo
+```dart 
+// continue -> skip an iteraion in a loop
+for (var i = 0; i < 10; i++) {
+    if (i == 5) {
+        // skip when i==5
+        continue;
+    }
+    print(i);
+}
+```
 ---
