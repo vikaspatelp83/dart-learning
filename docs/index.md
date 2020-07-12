@@ -40,6 +40,9 @@ I've covered almost every fundamental concept of Dart in these notes.
       - [Syntax](#syntax-2)
       - [Demo](#demo-6)
     - [3.1.2 Variation in for](#312-variation-in-for)
+  - [3.2 While Loop](#32-while-loop)
+    - [Syntax](#syntax-3)
+    - [Demo](#demo-7)
 
 
 
@@ -478,3 +481,25 @@ for(var x = 0;;){
 
 ---
 
+
+## 3.2 While Loop
+While loop is an `entry controlled` loop.  
+The code inside `{...}` of while loop will execute only when the condition is `true`.
+
+### Syntax 
+`while(condition){...}`
+
+Here we declare a condition or breaking condition for the loop.  
+See the demo
+### Demo
+```dart
+// while loop
+// print 0...9
+var k = 0; // this is must
+while (k < 10) {
+    print(k);
+    k++;
+}
+```
+
+---
