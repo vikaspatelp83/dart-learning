@@ -5,36 +5,62 @@ You can use these notes as a quick reference to Syntax and Demo.
 I've covered almost every fundamental concept of Dart in these notes.  
 
 [Take a look at my blog](https://www.villageprogrammer.blogspot.com/) 
-
-
-
-- [Dart Notes by Vikas Patel](#dart-notes-by-vikas-patel)
-- [1. Basics](#1-basics)
-  - [1.1 The Main Function](#11-the-main-function)
-    - [The syntax of main function](#the-syntax-of-main-function)
-    - [Demo](#demo)
-  - [1.2 Data Types](#12-data-types)
-    - [Syntax creating variables in Dart](#syntax-creating-variables-in-dart)
-    - [Demo](#demo-1)
-  - [1.3 String and String Interpolation](#13-string-and-string-interpolation)
-  - [1.4 Constant and Final Variables](#14-constant-and-final-variables)
-    - [Demo](#demo-2)
-- [2. Control Statements](#2-control-statements)
-  - [2.1 If - Else Statements](#21-if---else-statements)
-      - [IF alone](#if-alone)
-      - [IF and ELSE together](#if-and-else-together)
-      - [IF-ELSE ladder](#if-else-ladder)
-    - [Demo](#demo-3)
-  - [2.2 Conditional Expression](#22-conditional-expression)
-  - [2.3 Switch Case](#23-switch-case)
-      - [Syntax](#syntax)
-    - [Demo](#demo-4)
-
-
+   
+---
+## Table of contents:
+1. [Basics](#basics):  
+   1. [The Main Function](#main)
+   2. [Data Types](#datatypes)
+   3. [String Interpolation](#string_interp)
+   4. [Constant and Final Variables](#final_const)
+2. [Control Statements](#control)
+   1. [If - Else Statements](#ifelse)
+   2. [Conditional Expression](#cond_expr)
+   3. [Switch Case](#switch)
+3. [Looping](#loop)
+   1. [For Loop](#for)
+   2. [While Loop](#while)
+   3. [Do ... While Loop](#do_while)
+   4. [Break and Continue](#break_continue)
+   5. [Lable](#label)
+4. [Functions](#functions)
+   1. [Syntax](#func_syntax)
+   2. [Types of Functions](#func_types)
+   3. [Function Expression (The Fat Arrow)](#fat_arrow)
+   4. [Types of Function Parameters](#func_parameters)
+5. [Exception Handling](#exception_handling)
+   1. [Handle Exception](#handle_exxception)
+      1. [try](#try)
+      2. [catch](#catch)
+      3. [on](#on)
+      4. [finally](#finally)
+   2. [Stack Trace](#stack_trace)
+   3. [Custom Exceptions (Create an Exception Class)](#custom_exceptions)
+6. [Object Oriented Programming](#oop)
+   1. [Class](#class)
+   2. [Constructor](#constructor)
+   3. [Getter Setter](#get_set)
+   4. [Inheritance](#inheritance)
+   5. [Method Overriding](#overriding)
+   6. [Inheritance Constructor](#inheritance_constructor)
+   7. [Abstract Class](#abstract_class)
+   8. [Interface](#interface)
+   9. [Static Members](#static)
+7.  [Functional Programming](#functional_prog)
+    1.  [Lambda](#lambda)
+    2.  [Higher Order Functions](#hofunc)
+    3.  [Closure](#closure)
+8.  [Collections](#collections)
+    1.  [List](#list)
+    2.  [Set](#set)
+    3.  [Map](#map)
+9.  [Standard Input/Output](#io)
+    1.  [Read user input](#input)
+    2.  [Write to console](#output)
 
 ---
 # 1. Basics
-## 1.1 The Main Function 
+## 1.1 The Main Function <a name="main"> </a>
 
 Every Dart program starts execution from `main()` functions.  
 ###  The syntax of main function
@@ -68,7 +94,7 @@ void main() {
 }
 ```
 ---
-## 1.2 Data Types
+## 1.2 Data Types <a name="datatypes"></a>
 Literals in Dart.  
 
 ```dart
@@ -199,7 +225,7 @@ print("Length of box = $BoxLength \nWeight of Box = $BoxWeight");
 ```
 ---
 
-## 1.4 Constant and Final Variables
+## 1.4 Constant and Final Variables <a name="final_const"></a>
 
 In dart we can create constants using 
   -> final
@@ -242,10 +268,10 @@ Try declaring the field as `final`, or adding the keyword `static`.**
 ---
 --- 
 
-# 2. Control Statements 
+# 2 Control Statements <a name="control"></a>
 These statements are use to control the execution flow of the program and add various logics to the program. 
 
-## 2.1 If - Else Statements 
+## 2.1 If - Else Statements <a name="ifelse"></a>
 Simple condition checking.  
 **Syntax**   
 
@@ -315,7 +341,7 @@ Check code inside `01 basics/05if_else.dart`.
 
 --- 
 
-## 2.2 Conditional Expression 
+## 2.2 Conditional Expression <a name="cond_expr"></a>
 Conditional expression is a simple alternative to `if-else`.  
 There are two conditional expressions   
 1. **`condition ? expr1 : expr2;`**  
@@ -337,13 +363,13 @@ There are two conditional expressions
 
 --- 
 
-## 2.3 Switch Case  
+## 2.3 Switch Case <a name="switch"></a>  
 
 If we have constant conditions like ids as `1, 2, 3, 4, 5`  
 Instead using many `if-else` statements we can use `switch-case` statement.
 
 The case can be a constant `int` or a constant `String`.  
-#### Syntax 
+##### Syntax 
 ```dart
 switch(variable){
     case 1: 
@@ -392,20 +418,28 @@ default:
 }
 ```
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--- - 
+[Dart Notes by Vikas Patel](#dart-notes-by-vikas-patel)
+  - [Table of contents:](#table-of-contents)
+- [Dart Notes by Vikas Patel](#dart-notes-by-vikas-patel)
+  - [Table of contents:](#table-of-contents)
+- [1. Basics](#1-basics)
+  - [1.1 The Main Function <a name="main"> </a>](#11-the-main-function)
+    - [The syntax of main function](#the-syntax-of-main-function)
+    - [Demo](#demo)
+  - [1.2 Data Types <a name="datatypes"></a>](#12-data-types)
+    - [Syntax creating variables in Dart](#syntax-creating-variables-in-dart)
+    - [Demo](#demo-1)
+  - [1.3 String and String Interpolation](#13-string-and-string-interpolation)
+  - [1.4 Constant and Final Variables <a name="final_const"></a>](#14-constant-and-final-variables)
+    - [Demo](#demo-2)
+- [2 Control Statements <a name="control"></a>](#2-control-statements)
+  - [2.1 If - Else Statements <a name="ifelse"></a>](#21-if---else-statements)
+      - [IF alone](#if-alone)
+      - [IF and ELSE together](#if-and-else-together)
+      - [IF-ELSE ladder](#if-else-ladder)
+    - [Demo](#demo-3)
+  - [2.2 Conditional Expression <a name="cond_expr"></a>](#22-conditional-expression)
+  - [2.3 Switch Case <a name="switch"></a>](#23-switch-case)
+        - [Syntax](#syntax)
+    - [Demo](#demo-4)
