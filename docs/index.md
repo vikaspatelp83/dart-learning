@@ -681,9 +681,9 @@ void sayHello(String name){
 }
 
 void main(){
-  sayhello("Vikas"); // Hello, Vikas
-  sayhello("Dart"); // Hello, Dart
-  sayhello("World"); // Hello, World
+  sayHello("Vikas"); // Hello, Vikas
+  sayHello("Dart"); // Hello, Dart
+  sayHello("World"); // Hello, World
 }
 ```
 Copy the above code and run it.  
@@ -696,9 +696,9 @@ String sayHello(String name){
 }
 
 void main(){
-  print(sayhello("Vikas")); // Hello, Vikas
-  print(sayhello("Dart")); // Hello, Dart
-  print(sayhello("World")); // Hello, World
+  print(sayHello("Vikas")); // Hello, Vikas
+  print(sayHello("Dart")); // Hello, Dart
+  print(sayHello("World")); // Hello, World
 }
 ```
 
