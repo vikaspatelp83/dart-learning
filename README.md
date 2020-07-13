@@ -19,6 +19,5 @@ Check the code files from above folders.
 
 ![Dart Logo](docs/dartlogo.png)
 
-![notesWebsite]: https://vikaspatelp83.github.io/dart-learning/
-
-![notesWiki]: https://github.com/vikaspatelp83/dart-learning/wiki
+[notesWebsite]: https://vikaspatelp83.github.io/dart-learning/
+[notesWiki]: https://github.com/vikaspatelp83/dart-learning/wiki
