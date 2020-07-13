@@ -55,7 +55,14 @@ I've covered almost every fundamental concept of Dart in these notes.
   - [3.5 Label](#35-label)
     - [Demo](#demo-11)
 - [4. Functions](#4-functions)
-      - [Breakdown of function](#breakdown-of-function)
+  - [4.1 Breakdown of function (Syntax)](#41-breakdown-of-function-syntax)
+  - [4.2 Function Expression (Fat Arrow `=>`)](#42-function-expression-fat-arrow-)
+  - [4.3 Types of function parameters](#43-types-of-function-parameters)
+    - [4.3.1 Required Parameters](#431-required-parameters)
+    - [4.3.2 Optional Parameters](#432-optional-parameters)
+      - [4.3.2.1 Optional Positional Parameters](#4321-optional-positional-parameters)
+      - [4.3.2.2 Optional Named Parameters](#4322-optional-named-parameters)
+      - [4.3.2.3 Default Parameters](#4323-default-parameters)
 
 
 
@@ -657,7 +664,7 @@ void sayHello(){
 }
 ```
 
-#### Breakdown of function
+## 4.1 Breakdown of function (Syntax)
 **`void`** : It is the return type as you know Dart is a statically typed language like Java, C++, C and there are more. This tells the compiler that we will return a vaalue of the given type `(int, double, String, bool, other user defined types)`.   
 Here  `void` tells that the function will not return any value.
 
@@ -705,5 +712,128 @@ int smartAreaOfRectange(int length, int width) {
 ```
 
 Put this code in your file and call it in the main function as we've done in `sayHello(...)` function.
+
+Another Example: 
+```dart
+int doubleIt(int x) {
+  return x * 2 + 17;
+}
+
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    print(doubleIt(i));
+  }
+}
+```
+---
+
+
+## 4.2 Function Expression (Fat Arrow `=>`)
+The function expression or _Fat Arrow `=>`_ is used to make the function definition shorter and simpler.  
+**It can only be used when there is only one statement in the function.**
+Like , double the value 
+```dart
+int doubleIt(int x) => x*2;
+```
+we don't use the `return` keyword here.  
+So , 
+```dart
+int doubleIt(int x) => return x*2;
+```
+will be wrong.  
+
+---
+
+## 4.3 Types of function parameters
+
+PARAMETERS:  
+  * Required  
+  * Optional:   
+    * Positional  
+    * Named  
+    * Default:   
+        * Positional  
+        * Named  
+
+### 4.3.1 Required Parameters
+These are the required parameters that cannot be omitted. 
+```dart
+// required parameters
+void requiredParameters(String c1, String c2, String c3) {
+  print("Required Parameters");
+  print("$c1, $c2, $c3");
+}
+void main() {
+  // required parameters
+  requiredParameters("NY", "Toronto", "San Diego");
+}
+```  
+
+### 4.3.2 Optional Parameters 
+We can omit passing these parameters.   
+Blank value is considered as `null`.
+
+
+#### 4.3.2.1 Optional Positional Parameters
+We pass the value based on the porition of the parameter in the function
+```dart
+// optional positional parameters
+void optionalPositionalParameters(String c1, String c2, [String c3]) {
+  print("Optional Positional Parameters");
+  print("$c1, $c2, $c3");
+}
+void main() {
+  // optional positional parameters
+  optionalPositionalParameters("NY", "Toronto"); // 2 values
+  optionalPositionalParameters("NY", "Toronto", "San Diego"); // 3 values
+}
+```
+
+#### 4.3.2.2 Optional Named Parameters
+we can give the name of parameter while passing the value
+```dart
+// optional named parameters
+void optionalNamedParameters(String c1, String c2, {String c3}) {
+  print("Optional Named Parameters");
+  print("$c1, $c2, $c3"); 
+}
+void main() {
+  // optional named parameters
+  optionalNamedParameters("NY", "Toronto");
+  optionalNamedParameters("NY", "Toronto", c3: "San Diego");
+}
+
+```
+#### 4.3.2.3 Default Parameters
+These are the `positional and named ` parameters with default value.
+**Default Positional**
+```dart
+// default positional parameters
+void defaultPositionalParameters(String c1, String c2, [String c3 = "Mumbai"]) {
+  print("deafault positional Parameters");
+  print("$c1, $c2, $c3");
+}
+void main() {
+  // default positional
+  defaultPositionalParameters("NY", "Toronto");
+  defaultPositionalParameters("NY", "Toronto", "San Diego");
+}
+```
+
+**Default Named** 
+
+```dart
+// default named parameters
+void defaultNamedParameters(String c1, String c2, {String c3 = "Mumbai"}) {
+  print("default Named Parameters");
+  print("$c1, $c2, $c3");
+}
+
+void main() {
+  // default named
+  defaultNamedParameters("NY", "Toronto");
+  defaultNamedParameters("NY", "Toronto", c3: "San Diego");
+}
+```
 
 
