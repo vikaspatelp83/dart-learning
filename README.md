@@ -10,7 +10,7 @@
 
 
 
-### [Take a look at my blog](https://www.villageprogrammer.blogspot.com/) 
+### [Take a look at my blog](https://villageprogrammer.blogspot.com/) 
 
 
 
