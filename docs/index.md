@@ -54,6 +54,8 @@ I've covered almost every fundamental concept of Dart in these notes.
       - [Demo](#demo-10)
   - [3.5 Label](#35-label)
     - [Demo](#demo-11)
+- [4. Functions](#4-functions)
+      - [Breakdown of function](#breakdown-of-function)
 
 
 
@@ -632,10 +634,76 @@ for (int i = 0; i < 5; i++) {
 ---
 
 
+# 4. Functions
+Functions are used to group the code statements that do something.   
+e.g. You want to calculate the area of a rectangle then the formula will be `area = length * width`.   
+You can do it where you want to use the `area`. _But, if you want to double the area and add 20 to the result then what ?  
+Will you write all the code again and again or find some convenient solution._ 
+So, the solution is using functions.  
+Your code will be 
+```dart
+var area = length * width;
+area = area * 2;
+area = area + 20;  
+```
+Now you are able to use the final value of `area`. 
+So, let's declare a simple function that says `Hello World!` to the user (after learning the simple function we will continue with our `area` calculation)   
+```dart
+void sayHello(){
+  print("Hello World!");
+  // That's common saying hello to the world
+  // let's say 'Hello Dart, Welcome to Earth' 
+  print("Hello Dart, Welcome to Earth"); 
+}
+```
 
+#### Breakdown of function
+**`void`** : It is the return type as you know Dart is a statically typed language like Java, C++, C and there are more. This tells the compiler that we will return a vaalue of the given type `(int, double, String, bool, other user defined types)`.   
+Here  `void` tells that the function will not return any value.
 
+**`sayHello`** : It is the name of the function. It can be anything but, should be relevant to the work of the function like: `multiplyBy2(), makeHalf(), doubleThevalue(), reduceThree(), calculateSI() etc.`
 
+**`()`** : It is called parameter. we can pass values that we want to work on. Like a `name` that should be printed instead of `Dart` or `World`  in the above example.   
+Let's assume we want to say Hello to you and we don't know your name then we will pass a `String` called  `name` and interpolate it with the word `Hello` and print it.  
+Look at the code below..
+```dart
+void sayHello(String name){
+  print("Hello, $name");
 
+}
 
+void main(){
+  sayhello("Vikas"); // Hello, Vikas
+  sayhello("Dart"); // Hello, Dart
+  sayhello("World"); // Hello, World
+}
+```
+Copy the above code and run it.  
+
+You can also return the string.
+```dart
+String sayHello(String name){
+  return "Hello, $name";
+  // don't forget to change the return type 
+}
+
+void main(){
+  print(sayhello("Vikas")); // Hello, Vikas
+  print(sayhello("Dart")); // Hello, Dart
+  print(sayhello("World")); // Hello, World
+}
+```
+
+Now, let's work on our `area` example:   
+```dart
+int smartAreaOfRectange(int length, int width) {
+  int var area = length * width;
+  area = area * 2;
+  area = area + 20;
+  return area;
+}
+```
+
+Put this code in your file and call it in the main function as we've done in `sayHello(...)` function.
 
 
