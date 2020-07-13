@@ -63,6 +63,7 @@ I've covered almost every fundamental concept of Dart in these notes.
       - [4.3.2.1 Optional Positional Parameters](#4321-optional-positional-parameters)
       - [4.3.2.2 Optional Named Parameters](#4322-optional-named-parameters)
       - [4.3.2.3 Default Parameters](#4323-default-parameters)
+- [5. Exception Handling](#5-exception-handling)
 
 
 
@@ -835,5 +836,10 @@ void main() {
   defaultNamedParameters("NY", "Toronto", c3: "San Diego");
 }
 ```
+
+---
+
+# 5. Exception Handling
+
 
 
