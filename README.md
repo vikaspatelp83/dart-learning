@@ -2,9 +2,9 @@
 
 ## **[NOTES for the course ](docs/index.md)**
 
-## **[NOTES for the course on Website ](notesWebsite)**
+## **[NOTES for the course on Website ](https://vikaspatelp83.github.io/dart-learning/)**
 
-## **[NOTES for the course on Wiki ](notesWiki)**
+## **[NOTES for the course on Wiki ](https://github.com/vikaspatelp83/dart-learning/wiki)**
 
 
 
@@ -18,6 +18,3 @@
 Check the code files from above folders.
 
 ![Dart Logo](docs/dartlogo.png)
-
-[notesWebsite]: https://vikaspatelp83.github.io/dart-learning/
-[notesWiki]: https://github.com/vikaspatelp83/dart-learning/wiki
